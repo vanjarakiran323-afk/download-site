@@ -312,7 +312,41 @@
       </div>
 
       <div class="btn-wrap">
-        <button class="btn btn-task" id="startBtn">Start Verification</button>
+        <button id="startBtn" class="btn btn-task" disabled>
+  Please wait 5 seconds...
+</button>
+
+<script>
+let timeLeft = 5;
+let btn = document.getElementById("startBtn");
+
+let countdown = setInterval(() => {
+  timeLeft--;
+  btn.innerText = "Please wait " + timeLeft + " seconds...";
+
+  if (timeLeft <= 0) {
+    clearInterval(countdown);
+    btn.disabled = false;
+    btn.innerText = "Start Verification";
+  }
+}, 1000);
+
+btn.onclick = function () {
+  // ad open
+  window.open("https://www.profitablecpmratenetwork.com/dmrvqmna?key=a5849bc6cd1e1022e77c527da869bbde", "_blank");
+
+  // run logs system
+  runLogs();
+
+  // button hide
+  btn.style.display = "none";
+
+  // next page
+  setTimeout(() => {
+    window.location.href = "security-check.html";
+  }, 5000);
+};
+</script>
 
         <div class="complete-msg" id="completeMsg">Verification Complete ✓</div>
         <div class="sub-msg" id="subMsg">System Access Granted</div>
