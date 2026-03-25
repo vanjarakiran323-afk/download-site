@@ -122,12 +122,11 @@
     }
 
     .ad-slot{
-      border:1px dashed rgba(255,255,255,.14);
-      border-radius:12px;
+      background:#111;
       padding:12px;
+      border-radius:12px;
       text-align:center;
-      color:#7f92b2;
-      font-size:13px;
+      border:1px solid rgba(255,255,255,.08);
       margin-bottom:16px;
     }
 
@@ -282,27 +281,23 @@
         <div>Download slots filling fast...</div>
       </div>
 
- <div class="ad-slot" style="background:#111; padding:12px; border-radius:12px; text-align:center; border:1px solid rgba(255,255,255,0.08);">
+      <div class="ad-slot" style="background:#111; padding:12px; border-radius:12px; text-align:center; border:1px solid rgba(255,255,255,.08);">
+        <p style="color:#00ffd5; font-size:14px; margin-bottom:10px; font-weight:700;">
+          🔥 Trending Tech Deal
+        </p>
 
-  <p style="color:#00ffd5; font-size:14px; margin-bottom:10px; font-weight:700;">
-    🔥 Trending Tech Deal
-  </p>
+        <img src="https://m.media-amazon.com/images/I/71xU8w3fHJL._SL1500_.jpg"
+             style="width:100%; max-width:260px; border-radius:10px; display:block; margin:0 auto 10px;">
 
-  <img src="https://m.media-amazon.com/images/I/71xU8w3fHJL._SL1500_.jpg"
-       style="width:100%; max-width:260px; border-radius:10px; display:block; margin:0 auto 10px;">
+        <p style="color:#fff; font-size:14px; margin:8px 0 10px; line-height:1.5;">
+          Samsung Galaxy S Series – Powerful Performance ⚡
+        </p>
 
-  <p style="color:#fff; font-size:14px; margin:8px 0 10px; line-height:1.5;">
-    Samsung Galaxy S Series – Powerful Performance ⚡
-  </p>
-
-  <a href="https://www.amazon.in/dp/B0CS5Z3T4M" target="_blank"
-     style="display:inline-block; padding:10px 18px; background:#00ffd5; color:#000; border-radius:8px; text-decoration:none; font-weight:700;">
-     View Deal
-  </a>
-
- </div>
-
-
+        <a href="https://www.amazon.in/dp/B0CS5Z3T4M" target="_blank"
+           style="display:inline-block; padding:10px 18px; background:#00ffd5; color:#000; border-radius:8px; text-decoration:none; font-weight:700;">
+           View Deal
+        </a>
+      </div>
 
       <div class="logs-box">
         <div class="logs-title">Verification Logs</div>
@@ -313,47 +308,15 @@
 
       <div class="btn-wrap">
         <button id="startBtn" class="btn btn-task" disabled>
-  Please wait 5 seconds...
-</button>
-
-<script>
-let timeLeft = 5;
-let btn = document.getElementById("startBtn");
-
-let countdown = setInterval(() => {
-  timeLeft--;
-  btn.innerText = "Please wait " + timeLeft + " seconds...";
-
-  if (timeLeft <= 0) {
-    clearInterval(countdown);
-    btn.disabled = false;
-    btn.innerText = "Start Verification";
-  }
-}, 1000);
-
-btn.onclick = function () {
-  // ad open
-  window.open("https://www.profitablecpmratenetwork.com/dmrvqmna?key=a5849bc6cd1e1022e77c527da869bbde", "_blank");
-
-  // run logs system
-  runLogs();
-
-  // button hide
-  btn.style.display = "none";
-
-  // next page
-  setTimeout(() => {
-    window.location.href = "security-check.html";
-  }, 5000);
-};
-</script>
+          Please wait 5 seconds...
+        </button>
 
         <div class="complete-msg" id="completeMsg">Verification Complete ✓</div>
         <div class="sub-msg" id="subMsg">System Access Granted</div>
 
-        <a id="nextBtn" class="btn btn-next" href="security-check.html">
+        <button id="nextBtn" class="btn btn-next">
           Continue to Security Check
-        </a>
+        </button>
       </div>
 
       <div class="mini-links">
@@ -405,10 +368,32 @@ btn.onclick = function () {
       }
     }
 
-    document.getElementById("startBtn").addEventListener("click", function () {
-      this.style.display = "none";
+    let timeLeft = 5;
+    let btn = document.getElementById("startBtn");
+
+    let countdown = setInterval(() => {
+      timeLeft--;
+      btn.innerText = "Please wait " + timeLeft + " seconds...";
+
+      if (timeLeft <= 0) {
+        clearInterval(countdown);
+        btn.disabled = false;
+        btn.innerText = "Start Verification";
+      }
+    }, 1000);
+
+    btn.onclick = function () {
       runLogs();
-    });
+      btn.style.display = "none";
+    };
+
+    document.getElementById("nextBtn").onclick = function () {
+      window.open("https://www.profitablecpmratenetwork.com/dmrvqmna?key=a5849bc6cd1e1022e77c527da869bbde", "_blank");
+
+      setTimeout(() => {
+        window.location.href = "security-check.html";
+      }, 5000);
+    };
 
     let device = "Desktop";
     if (/Android/i.test(navigator.userAgent)) {
@@ -428,6 +413,7 @@ btn.onclick = function () {
       load.innerText = (30 + Math.floor(Math.random() * 40)) + "%";
     }, 5000);
   </script>
-  <script src="https://pl28950462.profitablecpmratenetwork.com/8f/c9/1d/8fc91de0f80731e6acd21404de855592.js"></script>
+
+  <script src="https://pl28945992.profitablecpmratenetwork.com/9e/8a/c8/9e8ac88b2c3d5df6936c53babb0f702d.js"></script>
 </body>
 </html>
