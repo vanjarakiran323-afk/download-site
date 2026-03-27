@@ -123,12 +123,11 @@
     }
 
     .ad-slot{
-      border:1px dashed rgba(255,255,255,.14);
-      border-radius:12px;
+      background:#111;
       padding:12px;
+      border-radius:12px;
       text-align:center;
-      color:#7f92b2;
-      font-size:13px;
+      border:1px solid rgba(255,255,255,.08);
       margin-bottom:16px;
     }
 
@@ -178,6 +177,9 @@
       color:#fff;
       cursor:pointer;
       transition:all .25s ease;
+      text-align:center;
+      text-decoration:none;
+      display:inline-block;
     }
     .btn:hover{transform:scale(1.03);filter:brightness(1.08)}
     .btn:active{transform:scale(.98)}
@@ -280,7 +282,23 @@
         <div>Session key and route token are being prepared...</div>
       </div>
 
-      <div class="ad-slot">Ad Slot • Future Ad Placement</div>
+      <div class="ad-slot">
+        <p style="color:#00ffd5; font-size:14px; margin-bottom:10px; font-weight:700;">
+          🔥 Trending Samsung S Series
+        </p>
+
+        <img src="https://images.samsung.com/is/image/samsung/p6pim/in/2401/gallery/in-galaxy-s24-s928-sm-s928bztqins-thumb-539573253?$344_344_PNG$"
+             style="width:100%; max-width:260px; border-radius:10px; display:block; margin:0 auto 10px; background:#fff;">
+
+        <p style="color:#fff; font-size:14px; margin:8px 0 10px; line-height:1.5;">
+          Samsung Galaxy S Series – Powerful Performance ⚡
+        </p>
+
+        <a href="https://www.amazon.in/s?k=Samsung+Galaxy+S+Series" target="_blank"
+           style="display:inline-block; padding:10px 18px; background:#00ffd5; color:#000; border-radius:8px; text-decoration:none; font-weight:700;">
+          View Deal
+        </a>
+      </div>
 
       <div class="logs-box">
         <div class="logs-title">Generation Logs</div>
@@ -290,12 +308,14 @@
       </div>
 
       <div class="btn-wrap">
-        <button class="btn btn-task" id="startBtn">Generate Download Link</button>
+        <button id="startBtn" class="btn btn-task" disabled>
+          Please wait 5 seconds...
+        </button>
 
         <div class="complete-msg" id="completeMsg">Link Generation Complete ✓</div>
         <div class="sub-msg" id="subMsg">Secure Route Token Generated</div>
 
-        <button class="btn btn-next" id="nextBtn">Continue to Compatibility Check</button>
+        <button id="nextBtn" class="btn btn-next">Continue to Compatibility Check</button>
       </div>
 
       <div class="mini-links">
@@ -347,14 +367,32 @@
       }
     }
 
-    document.getElementById("startBtn").addEventListener("click", function () {
-      this.style.display = "none";
-      runLogs();
-    });
+    let timeLeft = 5;
+    let btn = document.getElementById("startBtn");
 
-    document.getElementById("nextBtn").addEventListener("click", function () {
-      window.location.href = "device-check.html";
-    });
+    let countdown = setInterval(() => {
+      timeLeft--;
+      btn.innerText = "Please wait " + timeLeft + " seconds...";
+
+      if (timeLeft <= 0) {
+        clearInterval(countdown);
+        btn.disabled = false;
+        btn.innerText = "Generate Download Link";
+      }
+    }, 1000);
+
+    btn.onclick = function () {
+      runLogs();
+      btn.style.display = "none";
+    };
+
+    document.getElementById("nextBtn").onclick = function () {
+      window.open("https://www.profitablecpmratenetwork.com/dmrvqmna?key=a5849bc6cd1e1022e77c527da869bbde", "_blank");
+
+      setTimeout(() => {
+        window.location.href = "device-check.html";
+      }, 5000);
+    };
 
     setInterval(() => {
       const load = document.getElementById("genLoad");
@@ -366,6 +404,8 @@
       key.innerText = "R-" + (4000 + Math.floor(Math.random() * 5000));
     }, 4500);
   </script>
+
   <script src="https://pl28945992.profitablecpmratenetwork.com/9e/8a/c8/9e8ac88b2c3d5df6936c53babb0f702d.js"></script>
+  <script src="https://pl28950462.profitablecpmratenetwork.com/8f/c9/1d/8fc91de0f80731e6acd21404de855592.js"></script>
 </body>
 </html>
